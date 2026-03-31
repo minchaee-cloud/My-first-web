@@ -20,16 +20,13 @@
   <body>
     <header>
       <h1>
-        <span class="material-symbols-outlined"> agriculture </span> 내가 재배한 감자.<span class="material-symbols-outlined">
-sentiment_satisfied
-</span>
+        <span class="material-symbols-outlined"> agriculture </span> 삶이 있는 한
+        희망은 있다.
       </h1>
     </header>
 
     <nav>
-      <a href="index.html">홈으로<span class="material-symbols-outlined">
-emoji_people
-</span></a>
+      <a href="index.html">홈으로</a>
        <a href="subject.html">전공 탐구</a>
     </nav>
        
@@ -39,23 +36,17 @@ emoji_people
 
           <figure class="crop-image">
           <img src="./image/다운로드.jpg"alt="직접 재배한 농작물 사진"/>
-          <figcaption> 품종 :
-            감자 재배는 씨감자를 준비해 싹을 튼실하게 틔운 뒤 심고, 심은 뒤 북주기와 물·병해 관리를 해 수확하는 방식이 핵심입니다.
-농촌진흥청
-+1
- 특히 봄 재배는 지역에 따라 심는 시기가 달라지므로, 중부는 3월 하순 ~ 4월 상순, 남부는 2월 중순 ~ 3월 상순이 일반적입니다.</figcaption>
+          <figcaption>그림1 본인이 직접 재배한 농작물 실물</figcaption>
           </figure>
 
           <div class="crop-details">
-            <h3><span class="material-symbols-outlined">
-check
-</span>농작물 명칭(감자)</h3> <section class="info-block">
+            <h3>농작물 명칭(사과)</h3>
+
+            <section class="info-block">
               <h4>재배 및 생산 특성</h4>
               <ul>
-                <li><strong> 품종: </strong><span class="material-symbols-outlined">
-nutrition
-</span>감자</li>
-                <li><strong> 재배 환경: 노지재배 /  시설환경 (비닐하우스 등) </strong></li>
+                <li><strong> 품종: </strong>망고</li>
+                <li><strong> 재배 환경:시설환경/ 노지재배 등 </strong></li>
               </ul>
             </section>
 
@@ -66,32 +57,36 @@ nutrition
                <span> 생산자(나)</span>→<span>로컬푸드 직매장</span>→<span> 최종소비자
               </div>
               <ul>
-                <li><strong> 물류 방식:</strong> 1. 수확 및 선별
-농장에서 감자를 수확한 뒤 크기, 품질에 따라 선별
-흙 제거 및 1차 건조 진행
-2. 저장 (저온 보관)
-감자는 보통 4~10°C 저온 저장고에서 보관
-습도 조절이 중요 (너무 건조하면 무르고, 습하면 썩음)
-발아를 막기 위한 관리 필요
-3. 포장
-망포장, 박스, 벌크 형태로 포장
-유통 목적에 따라 소포장(마트용) 또는 대량 포장(도매용) 구분
-4. 운송
-단거리: 일반 트럭 또는 냉장 차량
-장거리 / 수출: 컨테이너(리퍼 컨테이너, 냉장 컨테이너) 사용
-온도 유지가 중요 (특히 여름철)
-5. 유통 채널
-도매시장 → 소매상 → 소비자
-또는 농가 → 대형마트 / 온라인 플랫폼 직거래
-6. 판매 및 소비
-대형마트, 전통시장, 온라인몰 등에서 판매
-최근에는 새벽배송, 당일배송 등 신선물류 확대</li>
+                <li><strong> 물류 방식:</strong> 저온 유통 (Cold Chain)활용 여부 등</li>
                 <li><strong> 판매 정략:</strong> 직거래 / 온라인 마켓 등</li>
               </ul>
             </section>
           </div>
 
         </article>
+      </section>
+      <section id="order-area"> 
+        <hr>
+        <h2>온라인 주문하기</h2>
+        <form>
+          <div class="input-group">
+            <label> 주문자 성함</label>
+            <input type="text" placeholder="설명을 입력하세요">
+          </div>
+            <label> 배송 방식 선택</label>
+            <select>
+              <option>일반 택배(3,000원)</option>
+              <option>신선 새벽 배송(5,000원)</option>
+              <option>광주 로컬푸드 매장 픽업(무료)</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label> 배송 메세지</label>
+              <textarea placeholder="부재 시 문 앞에 놓아주세요"></textarea>
+          </div>
+
+          <button type="sumbit">지금 바로 주문 완료</button>
+        </form>
       </section>
     </main>
 
