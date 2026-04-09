@@ -159,3 +159,34 @@ select {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
 }
+.display-box {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+#targetlmg {
+  transition: transform 0.3s ease;
+}
+
+.thumb-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.thumb-list img {
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.2s;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.thumb-list img:hover {
+  border-color: #3f72af;
+  transform: scale(1.1);
+}

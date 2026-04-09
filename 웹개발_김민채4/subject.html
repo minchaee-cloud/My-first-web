@@ -25,9 +25,10 @@
       </h1>
     </header>
 
-    <nav>
+     <nav>
       <a href="index.html">홈으로</a>
-       <a href="subject.html">전공 탐구</a>
+      <a href="subject.html">전공 탐구</a>
+      <a href="gallery.html">갤러리</a>
     </nav>
        
     <main>
@@ -72,27 +73,39 @@
             <div class="input-row">
               <div class="input-group">
                 <label> 주문자 성함</label>
-                <input 
-                type="text" 
-                id="userName" 
-                placeholder="실명을 입력하세요">
+                <input type="text" id="userName" placeholder="실명을 입력하세요">
               </div>
 
                 <div class="input-group">
-                <label> 연락처</label>
-                <input type="text" id="userPone" placeholder="010-0000-000">
+                <label for=""> 연락처</label>
+                <input type="text" id="userPhone" placeholder="010-0000-000">
               </div>
               </div>
               
+              <div class="input-row">
+                 <div class="input-group">
+                   <label for= "unitweight">구매 단위 선택/label>
+                    <select id="unitWeight">
+                      <option value="15000">유기농 고구마 1kg (15,000원)</option>
+                      <option value="45000">유기농 고구마 3kg (45,000원)</option>
+                      <option value="70000">유기농 고구마 6kg (70,000원)</option>
+                    </select>
+                </div>
 
-       <div class="input-group">
-            <label>배송 방식 선택</label>
-            <select>
-              <option>일반 택배(3,000원)</option>
-              <option>신선 새벽 배송(5,000원)</option>
-              <option value="">광주 로컬푸드 매장 픽업(무료)</option>
-            </select>
-          </div>
+                <div class="input-group">
+                  <label for="quantity">주문 수량 (박스)</label>
+                  <input type="number" id="quantity" value="1" min="1" max="10">
+                </div>
+              </div>
+
+              <div class="input-group">
+                   <label> 베송 방식 선택</label>
+                    <select name="" id="deliveryFee">
+                      <option value="3000">일반 택배 (3000원)</option>
+                      <option value="5000">신선 새벽 배송 (5000원)</option>
+                      <option value="0">광주 로컬푸드 매장 픽업 (무료)</option>
+                    </select>
+                </div>
 
             <div class="input-group">
             <label> 배송 메세지</label>
@@ -121,9 +134,22 @@
       function processOrder(){
 
         let name = document.getElementById('userName').value;
-         let phone = document.getElementById('userPone').value;
-         let message = document.querySelector('textarea').value;
+         let phone = document.getElementById('userPhone').value;
+         let quantity = Number(document.getElementById("quantity").value);
+        let deliveryFee=Number(document.getElementById("deliveryFee").value);
 
+         let unitSelect = document.getElementById("unitWeight");
+         let productprice = Number(unitSelect.value);
+         let productName = unitSelect.options[unitSelect.selectedIndex].text;
+
+         let basePrice = productprice * quantity
+
+        if (basePrice >=30000) {
+          deliveryFee = 0;
+        }
+        let totalPrice = basePrice + deliveryFee;
+
+        let dateString = new Date().toLocaleDateString();
 
          if(name==="" || phone ===""){
           alert("성함과 연락처를 모두 입력해 주세요!");
@@ -133,11 +159,22 @@
 
          receipt.innerHTML = `
          <h3> 주문 확인 영수증 </h3>
-         <p><strong>주문자:</strong>${name}님</p>
-         <p><strong>연락처:</strong>${phone}님</p>
-         <p><strong>요청사항:</strong>${message || "없음"}</p>
+         <p stlye="color:gray; font-size: 0.8em;"> 주문 시각:${dateString}</p>
          <hr>
-         <p style="text-align:center;"> 주문해주셔서 감사합니다!</p>
+         <p><strong>주문자:</strong>${name}님</p>
+         <p><strong>주문 상품:</strong>${productName}</p>
+         <p><strong>주문 수량:</strong>${quantity} 박스</p>
+         <p><strong>배송비: </strong>${deliveryFee.toLocaleString()} 원</p>
+         ${deliveryFee === 0 ? "무료배송" : deliveryFee.toLocaleString () + "원"}
+
+         
+        <p style="font-size: 1.2em; margin-top: 10px;">
+              <strong> 총 결제 금액:
+              <span style="color:red;">${totalPrice.toLocaleString()}원</span>
+        </strong>
+        </p>
+        <hr>
+        <p style="text-align: center;">주문해주셔서 감사합니다! </p>
          `;
          receipt.style.display="block";
       }
