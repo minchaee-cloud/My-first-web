@@ -172,16 +172,15 @@ select {
 }
 
 .thumb-list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
   gap: 15px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
 .thumb-list img {
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: 0.2s;
-  width: 100px;
+  width: 100px;;
+  height: 120px;
+  transition: 0.3s;
   object-fit: cover;
   border-radius: 10px;
 }
