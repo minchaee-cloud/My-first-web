@@ -20,48 +20,64 @@
   <body>
     <header>
       <h1>
-        <span class="material-symbols-outlined"> agriculture </span> 삶이 있는 한
-        희망은 있다.
+        <span class="material-symbols-outlined">
+potted_plant
+</span>
+   </span> 내가 재배한 감자 <span class="material-symbols-outlined">
+potted_plant
+</span>
+</span>
       </h1>
     </header>
 
      <nav>
-      <a href="index.html">홈으로</a>
-      <a href="subject.html">전공 탐구</a>
-      <a href="gallery.html">갤러리</a>
+      <a href="index.html"> <span class="material-symbols-outlined">
+home
+</span>홈으로</a>
+      <a href="subject.html"><span class="material-symbols-outlined">
+search
+</span>전공 탐구</a>
+      <a href="gallery.html"><span class="material-symbols-outlined">
+add_photo_alternate
+</span>갤러리</a>
     </nav>
        
     <main>
       <!--[Step 1] 인증 전: 로그인 박스 영역-->
       <div id="login-box" style="text-align: center;  margin: 50px;">
         <h2> 🔒 시스템 인증에 필요합니다</h2>
-        <input type="text" id="userName" placeholder="사용자 이름"/><br>
+        <input type="text" id="userdName" placeholder="사용자 이름"/><br>
         <input type="password" id="userPw" placeholder="암호 입력"/><br>
         <button onclick="checkLogin()">입장하기</button>
       </div>
-    </main>
+   
+    
 
        <!--[Step 2] 인증 후 보호된 콘텐츠 영억-->
       <div id="secret-area" style="display: none;">
         <!--⭐ 로그인한 사용자의 이름을 보여줄 공간입니다.-->
-         <h3 style="color: 2e7d32;"> 김민채 <span id="user-display"></span>님, 반갑습니다</h3>
+         <h3 style="color: 2e7d32;"> <span id="user-display"></span>님, 반갑습니다</h3>
+      </div>
+
 
          <!-- 🚩기존 포트폴리오 및 주문서 콘텐츠가 위치하는 곳입니다.-->
+          
        <article class="crop-item">
 
           <figure class="crop-image">
           <img src="./image/다운로드.jpg"alt="직접 재배한 농작물 사진"/>
-          <figcaption>그림1 본인이 직접 재배한 농작물 실물</figcaption>
+          <figcaption>내가 재배한 감자</figcaption>
           </figure>
 
           <div class="crop-details">
-            <h3>농작물 명칭(사과)</h3>
+            <h3>감자</h3>
 
             <section class="info-block">
               <h4>재배 및 생산 특성</h4>
               <ul>
-                <li><strong> 품종: </strong>망고</li>
-                <li><strong> 재배 환경:시설환경/ 노지재배 등 </strong></li>
+                <li><strong> 품종: </strong> 감자</li>
+                <li><strong> 시설환경:</strong>  감자 시설환경은 겨울철 하우스에서 온도와 토양수분을 최적화해 저온·고온·과습 등 환경 스트레스를 줄이는 것이 핵심입니다.
+                 <li><strong>노지재배: </strong>  노지재배는 파종 시기·수분·배수·병해 관리가 수확량과 품질을 좌우합니다.  등 </strong></li>
               </ul>
             </section>
 
@@ -72,8 +88,8 @@
                <span> 생산자(나)</span>→<span>로컬푸드 직매장</span>→<span> 최종소비자
               </div>
               <ul>
-                <li><strong> 물류 방식:</strong> 저온 유통 (Cold Chain)활용 여부 등</li>
-                <li><strong> 판매 정략:</strong> 직거래 / 온라인 마켓 등</li>
+                <li><strong> 물류 방식:</strong> 감자의 물류방식은 수확 후 품질을 유지하면서 소비지까지 효율적으로 이동시키는 과정으로, 저장·선별·포장·운송 단계가 핵심입니다. 감자는 저장성이 비교적 좋은 작물이지만, 온도·습도 관리가 제대로 안 되면 쉽게 부패하거나 싹이 트기 때문에 물류 관리가 중요합니다.</li>
+                <li><strong> 판매 전략:</strong> 온라인 마켓은 스마트스토어나 오픈마켓을 통해 전국 단위로 판매할 수 있어 판로가 훨씬 넓고 물량을 빠르게 소진할 수 있습니다. 대신 경쟁이 많아 가격 경쟁이 발생하기 쉽고, 택배·포장·리뷰 관리 등 운영 부담이 따릅니다.</li>
               </ul>
             </section>
           </div>
@@ -98,11 +114,11 @@
               
               <div class="input-row">
                  <div class="input-group">
-                   <label for= "unitweight">구매 단위 선택/label>
+                   <label for= "unitweight">구매 단위 선택</label>
                     <select id="unitWeight">
-                      <option value="15000">유기농 고구마 1kg (15,000원)</option>
-                      <option value="45000">유기농 고구마 3kg (45,000원)</option>
-                      <option value="70000">유기농 고구마 6kg (70,000원)</option>
+                      <option value="15000">유기농 감자 1kg (15,000원)</option>
+                      <option value="45000">유기농 감자 3kg (45,000원)</option>
+                      <option value="70000">유기농 감자 6kg (70,000원)</option>
                     </select>
                 </div>
 
@@ -135,27 +151,28 @@
             바로 주문 완료
           </button>
          <div id="receipt" class="receipt-box">
+         </form>
+      </section>
 
-         </div>
-
-    
-      </div>
-       <hr>
-      <div id="setting" style="margin-top: 30px; padding: 20px; border: 1px solid #ddd; background: #fff;">
+    <div id="setting" style="margin-top: 30px; padding: 20px; border: 1px solid #ddd; background: #fff;">
         <h4>🔑 시스템 보안 설정</h4>
         <p style="font-size: 0.9em; color: #666;">보안을 위해 정기적으로 비밀번호를 변경해 주세요.</p>
         <input type="password" id="newPw" placeholder="새 비밀번호 입력"/>
         <button onclick="changePassword()">비밀번호 변경</button>
         <button onclick="logout()">로그아웃</button>
       </div>
-        </div>
-
-        </form>
-      </section>
-     
+      </div>
+       </main>
+       
       
         
-    </main>
+
+      
+    
+    
+      
+        
+    
 
     <footer>minchaee@goedu.kr &copy; all right resevered by 2026 김민채</footer>
 
@@ -211,7 +228,7 @@
      }
       
        function checkLogin(){
-      let name = document.getElementById("userName").value;
+      let name = document.getElementById("userdName").value;
       let pw = document.getElementById("userPw").value;
 
       let currentPw = localStorage.getItem("userPassword") || "1234";
@@ -243,7 +260,7 @@
        if(isLoggendIn === "true"){
         document.getElementById("login-box").style.display="none";
          document.getElementById("secret-area").style.display="block";
-          document.getElementById("user-display").innerText="savedName";
+          document.getElementById("user-display").innerText=savedName;
        }
       }
        

@@ -12,8 +12,8 @@ header {
   padding: 50px 0;
 }
 nav {
-  background-color: rgb(238, 245, 147);
-  color: #f9f6c4;
+  background-color: rgb(209, 92, 190);
+  color: #ffffff;
   text-decoration: none;
   text-align: center;
 }
@@ -28,7 +28,7 @@ img {
   margin: 30px auto;
   width: 250px;
   border-radius: 50%;
-  border: 10px solid white;
+  border: 10px solid rgb(255, 248, 149);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,13 +43,13 @@ main {
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
-  background-color: white;
+  background-color: rgb(236, 236, 234);
   border: 1px solid #ddd;
 }
 .my-button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #edf99d;
+  background-color: #3b1ea3;
   color: white;
   text-decoration: none;
   border-radius: 20px;
@@ -173,12 +173,12 @@ select {
 
 .thumb-list {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   margin-top: 20px;
 }
 .thumb-list img {
-  width: 100px;;
+  width: 100px;
   height: 120px;
   transition: 0.3s;
   object-fit: cover;
